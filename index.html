@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors!</title>
+</head>
+<body>
+    <script>
+        function computerPlay() {
+            let value = Math.floor(Math.random() * 3);
+            let outcome;
+            switch (value) {
+                case value = 0:
+                    outcome = "Rock";
+                    break;
+                case value = 1:
+                    outcome = "Paper";
+                    break;
+                case value = 2:
+                    outcome = "Scissors";
+                default:
+                    break;
+            }
+            return outcome;
+        }
+        console.log(computerPlay());
+    </script>
+</body>
+</html>
