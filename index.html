@@ -23,8 +23,50 @@
                     break;
             }
             return outcome;
+        
         }
-        console.log(computerPlay());
-    </script>
+        let result;
+        let tie = "You tied! Try again!";
+        let loss = "You lost! Too bad!";
+        let win = "You win!";
+
+        function playRound(playerInput, computerPlay) {
+            if (playerInput == 'ROCK') {
+                switch (computerPlay) {
+                    case computerPlay = "Rock":
+                        result = tie;
+                        break;
+                    case computerPlay = "Paper":
+                        result = loss;
+                        break;
+                    case computerPlay = "Scissors":
+                        result = win;
+                        break;    
+                }
+            if (playerInput == 'PAPER') {
+                switch (computerPlay) {
+                    case computerPlay = "Rock":
+                        result = win;
+                        break;
+                    case computerPlay = "Paper":
+                        result = tie;
+                        break;
+                    case computerPlay = "Scissors":
+                        result = loss;
+                        break;
+            }
+            if (playerInput == 'SCISSOR') {
+                switch (computerPlay) {
+                    case computerPlay = "Rock":
+                        result = loss;
+                        break;
+                    case computerPlay = "Paper":
+                        result = win;
+                        break;
+                    case computerPlay = "Scissors":
+                        result = tie;
+                        break;
+            }
+        }</script>
 </body>
 </html>
