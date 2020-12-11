@@ -43,6 +43,7 @@
                         result = win;
                         break;    
                 }
+            }    
             if (playerInput == 'PAPER') {
                 switch (computerPlay) {
                     case computerPlay = "Rock":
@@ -54,6 +55,7 @@
                     case computerPlay = "Scissors":
                         result = loss;
                         break;
+                }
             }
             if (playerInput == 'SCISSOR') {
                 switch (computerPlay) {
@@ -66,7 +68,11 @@
                     case computerPlay = "Scissors":
                         result = tie;
                         break;
+                }
             }
-        }</script>
+            return result;
+        }
+        console.log(playRound('ROCK', "Scissors"));
+    </script>
 </body>
 </html>
