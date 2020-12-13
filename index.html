@@ -16,47 +16,47 @@
 
         function playRound(playerInput, computerPlay) {
             let possibilities = ["win", "loss", "tie"];
-            let 
+            let verdict;
             if (playerInput == 'ROCK') {
                 switch (computerPlay) {
                     case computerPlay = "Rock":
-                        possibilities = tie;
+                        verdict = possibilities[2];
                         break;
                     case computerPlay = "Paper":
-                        possibilities = loss;
+                        verdict = possibilities[1];
                         break;
                     case computerPlay = "Scissors":
-                        possibilities = win;
+                        verdict = possibilities[0];
                         break;    
                 }
             } else if (playerInput == 'PAPER') {
                 switch (computerPlay) {
                     case computerPlay = "Rock":
-                        possibilities = win;
+                        verdict = possibilities[0];
                         break;
                     case computerPlay = "Paper":
-                        possibilities = tie;
+                        verdict = possibilities[2];
                         break;
                     case computerPlay = "Scissors":
-                        possibilities = loss;
+                        verdict = possibilities[1];
                         break;
                 }
             } else if (playerInput == 'SCISSOR') {
                 switch (computerPlay) {
                     case computerPlay = "Rock":
-                        possibilities = loss;
+                        verdict = possibilities[1];
                         break;
                     case computerPlay = "Paper":
-                        possibilities = win;
+                        verdict = possibilities[0];
                         break;
                     case computerPlay = "Scissors":
-                        possibilities = tie;
+                        verdict = possibilities[2];
                         break;
                 }
             } else {
-                possibilities = loss;
+                verdict = possibilities[1];
             }
-            return possibilities;
+            return verdict;
         }
         function game() {
             let wins = 0;
