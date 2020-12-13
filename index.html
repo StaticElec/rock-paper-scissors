@@ -7,72 +7,79 @@
 </head>
 <body>
     <script>
+        let options = ["Rock", "Paper", "Scissors"];
         function computerPlay() {
-            let value = Math.floor(Math.random() * 3);
-            let outcome;
-            switch (value) {
-                case value = 0:
-                    outcome = "Rock";
-                    break;
-                case value = 1:
-                    outcome = "Paper";
-                    break;
-                case value = 2:
-                    outcome = "Scissors";
-                default:
-                    break;
-            }
+            let outcome = options[Math.floor(Math.random() * 3)];
             return outcome;
-        
         }
-        let result;
-        let tie = "You tied! Try again!";
-        let loss = "You lost! Too bad!";
-        let win = "You win!";
+        
 
         function playRound(playerInput, computerPlay) {
+            let possibilities = ["win", "loss", "tie"];
+            let 
             if (playerInput == 'ROCK') {
                 switch (computerPlay) {
                     case computerPlay = "Rock":
-                        result = tie;
+                        possibilities = tie;
                         break;
                     case computerPlay = "Paper":
-                        result = loss;
+                        possibilities = loss;
                         break;
                     case computerPlay = "Scissors":
-                        result = win;
+                        possibilities = win;
                         break;    
                 }
-            }    
-            if (playerInput == 'PAPER') {
+            } else if (playerInput == 'PAPER') {
                 switch (computerPlay) {
                     case computerPlay = "Rock":
-                        result = win;
+                        possibilities = win;
                         break;
                     case computerPlay = "Paper":
-                        result = tie;
+                        possibilities = tie;
                         break;
                     case computerPlay = "Scissors":
-                        result = loss;
+                        possibilities = loss;
                         break;
                 }
-            }
-            if (playerInput == 'SCISSOR') {
+            } else if (playerInput == 'SCISSOR') {
                 switch (computerPlay) {
                     case computerPlay = "Rock":
-                        result = loss;
+                        possibilities = loss;
                         break;
                     case computerPlay = "Paper":
-                        result = win;
+                        possibilities = win;
                         break;
                     case computerPlay = "Scissors":
-                        result = tie;
+                        possibilities = tie;
                         break;
                 }
+            } else {
+                possibilities = loss;
             }
-            return result;
+            return possibilities;
         }
-        console.log(playRound('ROCK', "Scissors"));
+        function game() {
+            let wins = 0;
+            let losses = 0;
+            let ties = 0;
+            for (let i = 0; i < 5; i++) {
+                let input = prompt("Rock Paper or Scissors?");
+                let fixedInput = input.toUpperCase();
+                let round = playRound(fixedInput, computerPlay());
+                if (round = win) {
+                    wins++;
+                    console.log("Win");
+                } else if (round = loss) {
+                    losses++;
+                    console.log('Loss');
+                } else {
+                    ties++;
+                    console.log("Tie");
+                }
+                console.log(game());
+                return `Wins: ${wins}, Ties: ${ties}, Losses: ${losses}`;
+            }
+        }
     </script>
 </body>
 </html>
