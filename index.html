@@ -17,9 +17,11 @@
         
         function playRound(playerInput, computerPlay) {
             let verdict;
-            if (playerInput === "ROCK" && computerPlay === "Scissors" || playerInput === "SCISSORS" && computerPlay === "Paper" || playerInput === "PAPER" && computerPlay === "Rock") {
+            if (playerInput === "ROCK" && computerPlay === "Scissors" || playerInput === "SCISSORS" && computerPlay === "Paper" ||
+                     playerInput === "PAPER" && computerPlay === "Rock") {
                 verdict = possibilities[0];
-            } else if (playerInput === "PAPER" && computerPlay === "Scissors" || playerInput === "ROCK" && computerPlay === "Paper" || playerInput === "SCISSORS" && computerPlay === "Rock") {
+            } else if (playerInput === "PAPER" && computerPlay === "Scissors" || playerInput === "ROCK" && computerPlay === "Paper" ||
+                     playerInput === "SCISSORS" && computerPlay === "Rock") {
                 verdict = possibilities[1];
             } else {
                 verdict = possibilities[2];
